@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  padding: 10px 0px;
+}
+
+.container {
+  background-color: rgb(243, 178, 252);
+  width: 800px;
+}
