@@ -14,7 +14,7 @@ document.addEventListener('mousemove', (event) => {
     horizontal.style.top = `${y}px`;
 
     target.style.left = `${x}px`; 
-    target.style.top =  `${y}px`;
+    target.style.top = `${y}px`;
 
     description.style.left = `${x}px`; 
     description.style.top =  `${y}px`;
@@ -23,4 +23,21 @@ document.addEventListener('mousemove', (event) => {
 
 document.addEventListener('mouseleave', () => {
     container.style.display = 'none';
+});
+
+document.addEventListener('click', (event) => {
+    const x = event.clientX;
+    const y = event.clientY;
+
+    const image = new Image(300, 170);
+    image.src = '/lesson04/img/bulletMarks.png';
+    image.style.left = `${x}px`;
+    image.style.top = `${y}px`;
+    image.style.zIndex = -3;
+    image.className = 'bullet-marks';
+
+    document.getElementsByTagName('body')[0].appendChild(image);
+    setTimeout(() => {
+        document.getElementsByTagName('body')[0].removeChild(image);
+    }, 2000);
 });
