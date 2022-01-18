@@ -4,48 +4,37 @@ body {
     background-color: black;
 }
 
-.container {
-    position: relative;
-    width: 200px;
-    height: 120px;
+.container * {
+    position: absolute;
 }
 
 .container > div {
-    position: absolute;
+    background-color: white;
 }
 
-.container .interface {
-    width: 120px;
-    height: 120px;
-    left: 0;
-    top: 0;
+.horizontal {
+    width: 100%;
+    height: 1px;
+    top: 50%;
 }
 
-.container .coordinates {
+.vertical {
+    width: 1px;
+    height: 100%;
+    left: 50%;
+}
+
+.target {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.description {
+    top: 50%;
+    left: 50%;
+    transform: translate(20px, 20px);
     color: white;
     font-size: large;
     font-weight: bold;
-    right: 0;
-    bottom: 0;
-}
-
-.interface > div {
-    position: absolute;
-    border: 1px solid white;
-}
-
-.interface .left {
-    top: 60px;
-}
-
-.interface .right {
-    top: 60px;
-}
-
-.interface .top {
-    left: 60px;
-}
-
-.interface .bottom {
-    left: 60px;
 }

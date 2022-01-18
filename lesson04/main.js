@@ -1,32 +1,26 @@
 'use strict'
-
 const container = document.querySelector('.container');
-const leftDiv = container.querySelector('.left');
-const rightDiv = container.querySelector('.right');
-const topDiv = container.querySelector('.top');
-const bottomDiv = container.querySelector('.bottom');
-const coordinatesDiv = container.querySelector('.coordinates');
-window.addEventListener('mousemove', (event) => {
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+const vertical = document.querySelector('.vertical');
+const horizontal = document.querySelector('.horizontal');
+const target = document.querySelector('.target');
+const description = document.querySelector('.description');
+document.addEventListener('mousemove', (event) => {
+    container.style.display = 'block';
 
-    const coordinateX = event.clientX;
-    const coordinateY = event.clientY;
+    const x = event.clientX;
+    const y = event.clientY;
 
-    container.style.left = `${coordinateX - 60}px`;
-    container.style.top = `${coordinateY - 60}px`;
+    vertical.style.left = `${x}px`;
+    horizontal.style.top = `${y}px`;
 
-    leftDiv.style.left = `${-coordinateX + 30}px`;
-    leftDiv.style.borderLeftWidth = `${coordinateX}px`;
+    target.style.left = `${x}px`; 
+    target.style.top =  `${y}px`;
 
-    rightDiv.style.right = `${-(width - coordinateX) + 30}px`;
-    rightDiv.style.borderRightWidth = `${width - coordinateX}px`;
+    description.style.left = `${x}px`; 
+    description.style.top =  `${y}px`;
+    description.innerHTML = `${x}px, ${y}px`;
+});
 
-    topDiv.style.top = `${-coordinateY + 30}px`;
-    topDiv.style.borderTopWidth = `${coordinateY}px`;
-
-    bottomDiv.style.bottom = `${-(height - coordinateY) + 30}px`;
-    bottomDiv.style.borderBottomWidth = `${height - coordinateY}px`;
-
-    coordinatesDiv.innerHTML = `${coordinateX}px, ${coordinateY}px`;
+document.addEventListener('mouseleave', () => {
+    container.style.display = 'none';
 });
