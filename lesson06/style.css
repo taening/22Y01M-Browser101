@@ -1,0 +1,69 @@
+body {
+  margin: 0;
+  background-color: rgb(207, 211, 221);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 3px black;
+  justify-content: space-between;
+  margin: 30px auto;
+  width: 300px;
+  height: 600px;
+  border-radius: 12px;
+}
+
+.container nav {
+  background: linear-gradient(to right, rgb(222, 194, 212), rgb(154, 188, 235));
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  text-align: center;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  padding: 12px 0px;
+}
+
+.container .main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgb(241, 240, 246);
+  height: 100%;
+}
+
+.container .main .content {
+  padding: 4px 16px;
+}
+
+.container input {
+  margin: 0;
+  padding: 4px;
+  box-sizing: border-box;
+  border: none;
+  width: 100%;
+  height: 24px;
+  font-style: oblique;
+}
+
+.container footer {
+  background: linear-gradient(to right, rgb(222, 194, 212), rgb(154, 188, 235));
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 100%;
+  height: 64px;
+  text-align: center;
+  line-height: 40px;
+  font-size: xx-large;
+}
+
+.container footer > i {
+  padding-top: 12px;
+  cursor: pointer;
+}
+
+.container footer > i:hover {
+  transform: scale(1.2);
+  transition: transform 300ms ease;
+}
