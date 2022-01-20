@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  text-align: center;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  background-color: #ff7f00;
+  color: white;
+  font-size: large;
+  font-weight: bold;
+  margin: 20px 0px;
+}
+
+div {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+div > img {
+  width: 150px;
+  height: 150px;
+}
